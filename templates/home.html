@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+   <title>{% block title %}{{title}}{% endblock %}</title> 
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+   <script type="text/javascript" src="/static/js/home.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center;font-weight: bold;font-size: 35px;">
+           <label>RPi Web Server</label> 
+        </div>
+    </div>
+
+
+    <div class="row" >
+        <div class="col-sm-4" >
+            <div class="row" style="margin-top: 30px;border:1px solid black;padding: 10px;height: 250px;">
+               <div style="font-weight: bold;"> BODY : </div>
+                <div class="col-sm-12">
+                    <div>
+                        <label>id : </label>
+                    </div>
+                    <div>
+                        <input type="text" id="id">
+                    </div>
+                    <div>
+                        <label>name : </label>
+                    </div>
+                    <div>
+                        <input type="text" id="name">
+                    </div>
+                    <div>
+                        <label>state : </label>
+                    </div>
+                    <div>
+                        <input type="text" id="state">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <button type="button" class="btn btn-primary" onclick="datasend()">Data Send</button>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+            <div class="row" style="margin-top: 30px;border:1px solid black;padding: 10px;height: 250px;overflow-x: auto;">
+               
+                <div class="col-sm-12">
+                    <div style="padding-bottom: 20px;">
+                        <button type="button" class="btn btn-primary" onclick="dataget()">Data Get</button>
+                    </div>
+                    <div>
+                        <textarea id="textareaid" style="height:150px;width:400px"></textarea>
+                    </div>
+   
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <textarea id="textareaid1" style="height:150px;width:400px">
+                
+            </textarea>
+        </div>
+    </div>
+
+
+   
+   
+   
+   <!-- {% for pin in pins %}
+   <h2>{{ pins[pin].name }}
+   {% if pins[pin].state == true %}
+      is currently <strong>on</strong></h2><div class="row"><div class="col-md-2">
+      <a href="/{{pin}}/off" class="btn btn-block btn-lg btn-default" role="button">Turn off</a></div></div>
+   {% else %}
+      is currently <strong>off</strong></h2><div class="row"><div class="col-md-2">
+      <a href="/{{pin}}/on" class="btn btn-block btn-lg btn-primary" role="button">Turn on</a></div></div>
+   {% endif %}
+   {% endfor %} -->
+</div>
+</body>
+</html>
